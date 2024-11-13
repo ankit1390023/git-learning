@@ -7,8 +7,6 @@
 
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: #fff;
