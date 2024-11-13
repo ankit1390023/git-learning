@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-section {
+    text-align: center;
+    z-index: 1;
+}
+
+.title {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+.cta-button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    color: #ff7e5f;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background-color: #fefefe;
+}
+
+.hidden-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hidden-message h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hidden-message p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.close-button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #ff7e5f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #feb47b;
+}
+
+/* Background animation */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+    animation: animate 6s linear infinite;
+    z-index: 0;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-25%, -25%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
